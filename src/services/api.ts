@@ -1,10 +1,9 @@
 import axios from "axios";
-import * as dotenv from "dotenv";
 
-dotenv.config();
+
 
 const api = axios.create({
-  baseURL: process.env.BASE_URL,
+  baseURL: "http://127.0.0.1:3000/api",
 });
 
 api.interceptors.response.use(
